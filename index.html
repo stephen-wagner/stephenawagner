@@ -9,19 +9,94 @@
         @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
         body {
-            background: gray;
+            background: #151515;
             font-family: 'Open Sans', sans-serif;
+            color: #f9f9f9;
+        }
+
+        button {
+            border-radius: 5px;
+            width: 40px;
+            height: 40px;
+            border: 1px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            background-image: url(data:image/png;base64,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)
+        }
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        .column_left {
+            width: 30%;
+            float: left;
+            position: relative;
+            vertical-align: middle;
+        }
+
+        .column_right {
+            width: 70%;
+            float: right;
+            position: relative;
+            vertical-align: middle;
+        }
+
+        #title {
+            font-size: 3em;
+        }
+
+        #subtitle {
+            font-size: 2em;
+        }
+
+        #blog, #resume, #portfolio, #twitter, #linkedin, #email, #github, #tableau {
+            opacity: 1;
+            background: #303030;
+        }
+
+        #blog:hover, #resume:hover, #portfolio:hover, #twitter:hover, #linkedin:hover, #email:hover, #github:hover, #tableau:hover {
+            opacity: 1;
+            background: #f9f9f9;
         }
         </style>
     </head>
     <body>
-        <div style="font-size: 3em;">
-            Stephen Wagner
+        <div class="column_left">
+            <div>
+                <img src="https://lh3.googleusercontent.com/lVF-5M10OqcOJMa2tfoOmJl0DY6hqQ0gB4ufbftkooLlBZ4eMUGlUkwajU2LLIZNGsmwt36qaIIUY-F_alBrTaFA0u28iZnrMJ1N07Z4L43_8SWhJSeBXTzdp1bMSewg153foQKtoBiS5ah-0A8NobcXtiUCmXAnlPf2WiS6U2hG_0q4GsTc6En51WzydCKYCUbRyru4OORGyKsk24aZNl4VGCL8dRmbwaoLlh_Za6tZ3LENqyBb_zQrpeIHs-lafiyh-2rEuAaiFlis3XWBv25QO3OmS1uog8xYiAsw4ukjWeou7Xu8Hx43o4O7oIv3_QKBYBwgvOdUWmK3b6oTfrFKSqNb5npblQGffHaLqet08zsgsB2gCw1ucZU6Ba62JKhlLaLIywr8jbg9JQYUdJ-2Znt_hvYL3X-SjDQM4fkfh5bJymp5gP-UE1vioM1t7TLr1mxVxqp6uLXU0hO8ChohrPEG7nHwxKXOjeYiSDJAnLqleTFefjdjfeZ7aQRO6kj55Cg7_32UdlryP1ICMF35Zk-7QnA-KpVUoQ_bz0enNuYqIOrUGcfJgQEbXNJG1p7rIkQLqCHRk5IBLHcmWrpsTmWfpvfrlfxTaHZGKHlAA4P9J6AJ=w1629-h974-no" style="width:90%;height:40%">
+            </div>
         </div>
-        <div style="font-size: 2em;">
-            Data Analyst &amp; Software Developer
+        <div class="column_right">
+            <div id="title">
+                Stephen Wagner
+            </div>
+            <div id="subtitle">
+                Data Analyst &amp; Software Developer
+            </div>
+            <div id="icons">
+                <button id="blog"><a href="https://analyticswagner.blogspot.com/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABvElEQVRIidXWP2sUYRDH8c+tRzyOFCmsRcRCLFKoiOVVFqaxUESxCYgvQLCwEAasrBR8ATaCaIJiaZFwpQSRQ1L4CsROOYIccqwWu0suy7O35I+FX7hmZuf325tnnrnrmCEi+riKGziPPrIynZefKcb4iBfYiohcA51SGM6WBZdmRNuY4CUeRMTP1AOV0Dl8wOV9iEMPd7EWEQupB46VbXlXmhyU0zg+GAw2h8Phn9lEhmu4eAjxins4WQ9muGl/bWliCVfqwS6WGwqGeKyYmGpKMpzBc5xI1FxIGfQbDJ5GxGY9GBGfsII7iZqleiArTVKsREQvET+lGOUUyxGx55t1IuJHyrnkt932VC+UHMcZ8rJugjdd8w+4TSxFprgfPdw+iulpdfu/Dbr2HmKdCXbsbtI6GRY1j/pcg2eKLTmd94YR0cUT3E/lM8V+T7HRJl4aTLHRkM67ijakeBQRmWKm57GAhw25X11sS2xBxW193yLexijDa/MP+qDkWMvwFqN/YLCN9SwidrCKb0co/h2rETGuLtoXxQoeOVy78hmtz5T/KioiYhHXcUvxG920yutM8RWvsB4R4yrxF23jbbxPeOaLAAAAAElFTkSuQmCC"></a></button>
+                <button id="github"><a href="https://github.com/stephen-wagner"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACGUlEQVRIiZXVy0tVURQG8J8XcRAiYiAR5EDCkUGjaJpC2CQSrP6BoKAcNWpQrQqDRkE0VbLHqHDSJIKiwIKKohcYUiER0SBCREJCLg32UY6ne871frNvrXPWt/d67TYViAgYxEkMoRe/8BB3sIx+7MOXiLhWjNFeEbyGE5hAd87VjZ04hlVsyeyXG8UpFcAhXEVHib+jwreOWiNjdvoruQAruIhhjEtpWkMdXzG3aQEMSGlYwwwuRMRjXM/E8wLHcbsVgb4CfxcRddYL/zLna0d3Zt+0wGKBby3wzgJfLYlTWuSPUguuBRqLiGksSF00nvt2GZ/KBMqK/AdTOVM/nuEVXmMk53uA+VZvAOelIRvKeLeN8wBvML5Wn0Yoq4GIWMRhaWqL+I2bOBARPysOWXkD2I69OT6Ps3iO72Wd04rAQXTl+JmImGkaNYfSFGVYLvDhiGh2qA1oq3JGRB9eYFtmquMJZvEIs1UFpvkNanhf4EM4h6eYi4ixbHe1JhARI1Lv7684wABuSWu9IRqmKCJ6pe3Yk5kWMCl1UR27cCrnX8KOiFgqxior2JHczzAaEW9z/F5EfMDdjHdJ7fzfzJSlqKfAGy2zYoc1fHzKbvC5wCcj4pK01GrSWzGR89dtbIamAjPSRh3M+B7cL/kWpiLiWyNH2TZdwai0Eqr6/C9u4HTZB80GrVN6/I9it7RN6/iRiU9rMmz/AC3wkBkKqsF8AAAAAElFTkSuQmCC"></a></button>
+                <button id="resume"><a href="resume.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABAklEQVRIicWUsUrEQBRFz4Zl18KvsNjCD/IjRIIW2ohybARBcNlfsdjfsPY7rMIy2ExgkZlMYhK9cAk8Zt6Zd5PJAkC9BF7o1lZ9iOsvgA/1s7CHKj5XwGnBq6N9G+BdPesL+I16QcYAAM6BvbqZCwCFSaYAdEJSgB2wjr4fAEnGlQIEtVEb4DAAAIlJpoooC1kmFtRqXWjyHF1UClCcSg19mvdqNlYLAPUaeIu1rXoT63eU/1E53aqvc04QIPMO1LY+5gBVDlBHT6J/iSgw7AZXmT7ZiHbtV9RH6iPw1EWfS9mIlupJhIejQ4QftfY2rzOAbERX0ZPozyJqgK+JAQeAbzI+TUcKTCRpAAAAAElFTkSuQmCC"></a></button>
+                <button id="portfolio"><a href="portfolio.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABg0lEQVRIidXVP2tUQRQF8F+WRVJIELEQC0kRxMrKSsFCxMJCLOxEgh9BUll59AvYBQRFogiKjYWkknyAYBUsU6hIWMQ/YCEhLIvFmyfPZDVhsoUeuMwwb+ace+/MvY//HVOQBI7gIHrFhtjEpySjaoEks1jCuT/sWce1JKs1Aj3c+ws5zOFhkpkagakkX3B4l30j3MagzFvTGdewVtL9m8A3HKrxbowTd3C3K9KbAHGXawEnu4uTjKDFa7zDeyz2J0jc4kJnfrZvfJoGuFU86V7obmhraAaPcHpcBCPcTPJsj6Q7kORiEVke5/0HLNeSF1zXRPKkDamLl0m+1zKXgryMDaxsJx/iaS15wRVNel4l+bpd4A3e1jIn6WNe4+gSO9PzIslmrQBO4IzSNlqB9gkOUf1yCq5iGs+T/GgFtsrHlSQbtcxJjuNG4Xvcrvexiks4muS+vRdWrzNO4zyO4UGSQVdgAbM4VawWW1jUdIBfaH+ZBzQXtJ/e9DHJ532c/0fxEyHOa103IHv9AAAAAElFTkSuQmCC"></a></button>
+                <button id="tableau"><a href="https://public.tableau.com/profile/analyticswagner#!/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIIAAACCCAMAAAHK2tBZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAbUExURQAAAG9vb3JycnNzc3FxcXFxcXJycnJycm9vb2KstLUAAAAJdFJOUwAgwEBwgP+gEFD0ooQAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQ7SURBVGhD7ZuJVuswDEThFQL//8XPI40ceY/TFAr4nkPjSOOJ4jhLF16MjcudNII1+1PyyAbcEuSaWgS4PDqLBZeM13rYn5JH1GJfglxTi4B0DZSRLlFujSwQi4oNSWjBsloE+BpXpJ90325c0VRU8NV5FAHpnjSiMukixMYczW5uy9bEqyMG4tIr2DPQCoC2qWGB2C/tzyXInNOlbNi4aUheJxRCSLIF0owtY0OXEQvcbuqfKmTDQisA9qwtfRZowPUsFJFmwngfKU4L3nWM9yrzMilwDpcKbrrlAAMsBcjqUADiJiIuCaLA5tS1gmR0owAwc1TAHSMSkoyuh27aMGLGdG2HuFBOFQkePJIgCm63T204wcUTJu6ZS4LLBG7DmSCSjHuN+wU5761aDjPr8BqutjyaoTP4t22yZAyH2y7IVcIWbcxtWAljGmWzRuIgFHvxMIdX2VfZ6+2DbWZsrxnFNnRkApoR9om9w5TBaAJT4BMjHPgI4Te2mTIYlW2xmUtAMQ7QlxE2azyDQ0Hp0KA46kbHIe1zl4NMDTt/XiUk3eqomWjjOceUogKu1KgIJJLtBecLEI3NsUA89fM+d41Dn45DneCb6ksHBNis8ZQOJQ2H+68w9zsY5V6ECFuk0dO42EHOm+KeNeMAbYSxoUNJsRfT3O8QhoGts/xNB1wK2eQTwbb9kyWDco/WK3odP13Ss41BifaqyrU7DE45KLl+OSgtBznkATiwSVk8+oziWU1niN3pFfTMYcpg1OOvhwwlMGUw6rnWAecDkDhhymD0LSg+2HYPExE4sNlg9mhKUUVkOXyFQ07p0KLl23NI+/xCB+1WhxIQ+8jVJrkzjR1EG/swpUh+7MAV5QIHhu4YByFZs7fQAVyR9qtWgBLQcXBoOVzJeD6HFj2HOrm+dECkt+2afjlc4aATnCvCrENJywE9c5gyGPVc+wTCUAJTBqOeax0MxNkk+bjNH4vlULmbBaYcsBJh7AscSmb1JcvhEPrOjCvfwyoB/P4SxD5Q3BFweWhAxY5pz5X5zCXYF2cBfHcWPwwJULHzoBIcw7mwSgCrBDBXgqlHUN6AohH1/VolgCcoIefIdBwyNx1zhiW4j0ZqH9AKDy7BHbmhZpUAVgngx5Yw5EgJc8hez1R7soTOdlYJoJNyl2KHfmAtuF/mOOqX7XMluP2doT42xXZEW8UZXFACQxWeoQS+DQrk74zcN8UXlEDTQOcd2LfNhZ1Oqo4rrL6xOqsE8NwlTHOyhAmk2p79kRJMc26vVwlglQB+QglHmCshfzTC76tA/kREeQOKDHuysh8oGfUHKjeuXShvQNGI+o6sEoD7aFmQp5uA/X+GQXkDigybUO4pSej9qHPnyBkhml5Rjz8pVwngL5fARAUKdn58CfjftfrlnOd2YPjdlN14jl0HzjCcC49nlQB+RQkvL/8BLClpm/JQb5QAAAAASUVORK5CYII="></a></button>
+                <button id="twitter"><a href="https://twitter.com/AnalyticsWagner"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAB2klEQVRIid3VP2hUQRAG8N+dRwgSREIQESsrEVFQEQkqh9gqWAmBIASC2FnYpHKsRC0FC0lAJAh2QSEgAQ2ikkLQSlJIEAsF0SOEEOQIh8Xbi89HknseafRr9s/Mft/sDDvLv45KN4ciAo7jEvZiCU8xFRHN5NOL3kpaDGEuIhZKkPfgJq6iWjC/SrZTqONCJSKqeIcazmEhRbiRwDXcWoc8jyVcwdsq+rALBzCD05uQ92KsAzksJ7/BGn5iJRn2YSYixlOUnwu3OYT+DuSwEzfwoF2DCYwUnL7jCR7jPRYxiBclBB5hOCJatbRxB+cxkHMaSKIjSewTmiXIoRERLahGRD8uJ9XWBgcGcCzdoAy+tic1WcXP4mDJw2XwoT2pRsQqJraQvIU3awJpvI+pLRJ4GRHf/hCIiBUM47asoN2ipZCN/IPZgTOyd9Et5hUysSYQEV8whz1dkq9iLCKW85u1gtNYGkew/S8F7mG6uLktv5idnW3W6/Vnstb7A0fQU4J8GqPtVp3Hek2rT/YmhtJ8M7QwiYsRsW7tKhFxAvtlTewoTso+kU4ds4HrGN+InKwG87JUjCahTljEQ9yNiI+dnNe+zNw3WMdh7Pb7Fo0UyGs83yzi/w+/ALwMhBNFU35gAAAAAElFTkSuQmCC"></a></button>
+                <button id="linkedin"><a href="https://www.linkedin.com/in/stephenawagner"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABWElEQVRIidXWMUscURTF8Z/LFItosN4+vYhFvoBJF1KkCIhJERYsRUjavUWaJBCSKqWEkIAfIJ1gIVhIGr+BiLWFDIsEGVI4A5PJG5RxLPbANOe+Of9337sMMxcRQ7zFGFfYwYeIuNSDMmxhgkHpTVDgXR+AAV7Vwitvo4/wKiylok/At0Zgge99ATJ8LkGvy/AdfOoLcO+aK8d0oeFPI2IKLfU8Ii4jYh7LWMUQJzjCaUQUXB/NCxw3ns1a2NNE/VlErGAfB/iC99gt6x9LuAzzGDV2WN/xMFF/gq9YSpzKA2xjFBEbbWN6k162hNf1HI+7Am7zXob1roACP/EQi1jDWWLdo6wj4DfG1aRhLyLe4Id/u1vq2sGvWnilQ1w0vKwr4DzhTfGn4Q26Aq5avP8+kne55FupT0ASOnMdzPYdJJW5Hq+84dfnuV6vjiH1S1OU6/Lauvwv5YZjv2PqHzsAAAAASUVORK5CYII="></a></button>
+                <button id="email"><a href="mailto:stephen.wagner.a@gmail.com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABaElEQVRIie3UPUhbURjG8V9DhhIcRBw7ODiKgzg4BCft6CooLkXjUEFCEXEIBsShlODgF2bplFGRgu4u6txBxMFJHKQ4iYiIdDg3EC+JSXMLLj7LgXve8/zPed5zD+96a30oFos57GEVmYR+z3jCDv5gPo3veMAjcgkBcIEFVJBNIY0SfuI8ofk9ZoWNfoZUNNGNNczjLgGgHK0vVL1TNZPDGMBGm+ZnWMe2ml6mYkUFHOH4H80fMYM8Bmsn0rHCjND0vJpj1hkJN6Y67goxT8fJcQD0Y1Jo1iX6GtQRruJNtOsKPrYCgC84wRh+NKiBK4wK2X+qVxDvQVWn+I2lV8xFpgtCnM/1CuoB7qNFJXQ1AcCE8KPutQrYwhCyLZgTct/EMq6bAc5woHk0cfViKoK8iCoOWIzMW4kmrjnhqTlsBCijByNtmEOHcOO+4bb6MY194VgFrOBXmwCRTye+Ylyyd+1d/0l/AYEdRAq8iixmAAAAAElFTkSuQmCC"></a></button>
+                
+            </div>
+<!--             <div id="iconText">
+                <span>Data Visualization Blog</span>
+                <span>Github</span>
+                <span>Resume</span>
+                <span>Portfolio</span>
+                <span>Twitter Account</span>
+                <span>LinkedIn Profile</span>
+                <span>Contact Me</span>
+            </div> -->
         </div>
-        <div id="app"></div>
-    	<script type="text/javascript" src="bundle.js" charset="utf-8"></script>
+    	<script type="text/javascript" src="app.js" charset="utf-8"></script>
     </body>
 </html>
